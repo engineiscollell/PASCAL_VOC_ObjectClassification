@@ -143,6 +143,6 @@ function c = classify(classifier, fd)
     % Explicitly convert to the same data type as training data to avoid warnings
     trainType = class(classifier.FD);
     fd = cast(fd, trainType);
-    
-    [~, score] = predict(classifier.model, fd); % predicció amb SVM
-    c = score(2); % puntuació per la classe positiva
+
+    [~, score] = predict(classifier.model, fd); % prediction with SVM
+    c = score(2); % score for the positive class
