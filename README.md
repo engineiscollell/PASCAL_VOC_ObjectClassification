@@ -83,6 +83,7 @@ This design enables systematic comparison of:
 | MobileNet     | Low              | Medium                   | Medium                  | Very Low                   |
 
 
+
 ![Classification workflow](assets/Overview-of-CNN-models-Top-1-accuracy-tested-on-ImageNet-vs-inference-time-a-single.png)
 
 ---
@@ -151,6 +152,17 @@ classes.
 - KNN-based classifiers across all CNNs
 - Significant performance drops, especially for challenging categories
   such as *person* and *horse* :contentReference[oaicite:9]{index=9}
+
+
+###Table Summary
+
+| CNN Backbone      | Best Configuration (Layer + Classifier) | Intermediate Configuration | Worst Configuration |
+|-------------------|------------------------------------------|----------------------------|---------------------|
+| AlexNet           | fc7 + SVM                                | fc8 + SVM                  | fc8 + KNN           |
+| ResNet101         | pool5 + SVM                              | fc1000 + SVM               | pool5 + KNN         |
+| MobileNet-v2      | global_avg_pooling2d_1 + SVM              | logits + SVM               | global_avg_pooling2d_1 + KNN |
+| EfficientNet-b0   | global_avg_pooling2d + SVM                | dense / MatMul + SVM       | global_avg_pooling2d + KNN   |
+
 
 ---
 
