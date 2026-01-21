@@ -14,33 +14,36 @@ Each configuration is evaluated independently.
 
 ## Directory Organization
 
+```text
+results/
 ├── AlexNet/
-│ ├── KNN/
-│ │ └── fc8/
-│ │ ├── roc_per_class.pdf
-│ │ ├── auc_per_class.csv
-│ │ └── auc_example.png
-│ └── SVM/
-│ ├── fc7/
-│ └── fc8/
+│   ├── KNN/
+│   │   └── fc8/
+│   │       ├── roc_per_class.pdf
+│   │       ├── auc_per_class.csv
+│   │       └── auc_example.png
+│   └── SVM/
+│       ├── fc7/
+│       └── fc8/
 ├── EfficientNet/
-│ ├── KNN/
-│ │ └── GlobAvgPool/
-│ └── SVM/
-│ ├── GlobAvgPool/
-│ └── MatMul/
+│   ├── KNN/
+│   │   └── GlobAvgPool/
+│   └── SVM/
+│       ├── GlobAvgPool/
+│       └── MatMul/
 ├── MobileNet/
-│ ├── KNN/
-│ │ └── Pool5/
-│ └── SVM/
-│ ├── Pooling2D1/
-│ └── Logits/
+│   ├── KNN/
+│   │   └── Pool5/
+│   └── SVM/
+│       ├── Pooling2D1/
+│       └── Logits/
 ├── ResNet/
-│ ├── KNN/
-│ │ └── Pooling2D1/
-│ └── SVM/
-│ ├── Pool5/
-│ └── fc1000/
+│   ├── KNN/
+│   │   └── Pooling2D1/
+│   └── SVM/
+│       ├── Pool5/
+│       └── fc1000/
+```
 
 
 Each layer-specific directory may contain:
