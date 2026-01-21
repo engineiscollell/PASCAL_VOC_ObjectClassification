@@ -71,6 +71,20 @@ This design enables systematic comparison of:
 - Feature extraction layers
 - Classifier behavior :contentReference[oaicite:2]{index=2}
 
+### CNN Backbones
+
+### Deep Learning Architectures Overview
+
+| Architecture  | Total Parameters | Depth (Number of Layers) | Generalization Capacity | Computational Requirements |
+|---------------|------------------|--------------------------|-------------------------|----------------------------|
+| AlexNet       | Medium           | 8                        | Low–Medium              | Low                        |
+| ResNet101     | High             | 101                      | High                    | High                       |
+| EfficientNet  | Moderate         | Variable (version-dependent) | Very High           | Optimized                  |
+| MobileNet     | Low              | Medium                   | Medium                  | Very Low                   |
+
+
+![Classification workflow](assets/Overview-of-CNN-models-Top-1-accuracy-tested-on-ImageNet-vs-inference-time-a-single.png)
+
 ---
 
 ## Practical Issues, Difficulties, and Solutions
