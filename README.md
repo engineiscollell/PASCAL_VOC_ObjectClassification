@@ -16,6 +16,12 @@ bicycle, bus, car, motorbike, cat, cow, dog, horse, sheep, and person. :contentR
 
 ---
 
+## Workflow Overview
+
+![Classification workflow](assets/workflow.png)
+
+---
+
 ## Repository Structure
 
 The repository is organized as follows:
