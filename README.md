@@ -69,7 +69,7 @@ Architectures evaluated include:
 This design enables systematic comparison of:
 - CNN backbones
 - Feature extraction layers
-- Classifier behavior :contentReference[oaicite:2]{index=2}
+- Classifier behavior
 
 ### CNN Backbones
 
