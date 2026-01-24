@@ -12,7 +12,7 @@ and high intra-class variability.
 
 The system follows the **official PASCAL VOC protocol** and evaluates image-level
 object classification across 10 categories:
-bicycle, bus, car, motorbike, cat, cow, dog, horse, sheep, and person. :contentReference[oaicite:1]{index=1}
+bicycle, bus, car, motorbike, cat, cow, dog, horse, sheep, and person.
 
 ---
 
@@ -94,28 +94,28 @@ This design enables systematic comparison of:
 **Problem:** Classical descriptors (SIFT, HOG) showed weak performance on VOC images
 due to occlusions and high variability.  
 **Solution:** Replaced handcrafted descriptors with pretrained CNN embeddings,
-which provided more robust and discriminative features. :contentReference[oaicite:3]{index=3}
+which provided more robust and discriminative features.
 
 ### Handling “Difficult” Objects
 **Problem:** VOC annotations include samples marked as *difficult*, which distort
 training and evaluation.  
 **Solution:** Difficult samples were excluded from both training and validation,
-following VOC Development Kit recommendations. :contentReference[oaicite:4]{index=4}
+following VOC Development Kit recommendations.
 
 ### File Structure and Data Access
 **Problem:** VOC evaluation scripts require a strict directory layout.  
 **Solution:** The official VOC folder structure was enforced and all required paths
-were configured via `VOCinit.m`. :contentReference[oaicite:5]{index=5}
+were configured via `VOCinit.m`.
 
 ### Computational Efficiency
 **Problem:** CNN feature extraction is computationally expensive.  
 **Solution:** Extracted features were cached to disk, training was limited to
-train/val splits, and minibatch inference was used when possible. :contentReference[oaicite:6]{index=6}
+train/val splits, and minibatch inference was used when possible.
 
 ### One-vs-Rest Classifiers
 **Problem:** VOC evaluation requires consistent binary classifiers per class.  
 **Solution:** Independent classifiers were trained per class using the official
-`<class>_train.txt` and `<class>_val.txt` splits. :contentReference[oaicite:7]{index=7}
+`<class>_train.txt` and `<class>_val.txt` splits.
 
 ---
 
@@ -129,7 +129,7 @@ train/val splits, and minibatch inference was used when possible. :contentRefere
 
 AUC is used as the primary scalar metric:
 - 1.0 indicates perfect classification
-- 0.5 corresponds to random performance :contentReference[oaicite:8]{index=8}
+- 0.5 corresponds to random performance
 
 ---
 
@@ -151,7 +151,7 @@ classes.
 ### Worst Configurations
 - KNN-based classifiers across all CNNs
 - Significant performance drops, especially for challenging categories
-  such as *person* and *horse* :contentReference[oaicite:9]{index=9}
+  such as *person* and *horse*
 
 
 ###Table Summary
@@ -177,7 +177,7 @@ classes.
 - Full fine-tuning of pretrained CNNs with access to stronger GPU resources
 - Evaluation of newer architectures (EfficientNet-v2, Vision Transformers)
 - Advanced data augmentation strategies
-- Model ensembles and self-supervised learning approaches :contentReference[oaicite:10]{index=10}
+- Model ensembles and self-supervised learning approaches
 
 ---
 
@@ -188,4 +188,4 @@ classes.
 - He et al., *Deep Residual Learning for Image Recognition*, CVPR 2016.
 - PASCAL VOC Challenge: http://host.robots.ox.ac.uk/pascal/VOC/
 - VLFeat Toolbox: http://www.vlfeat.org/
-- PRTools Toolbox: https://prtools.tudelft.nl/ :contentReference[oaicite:11]{index=11}
+- PRTools Toolbox: https://prtools.tudelft.nl/
